@@ -1,0 +1,26 @@
+.article-cards {
+  box-sizing: border-box;
+  width: 30%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  h2 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  img {
+    width: 75%;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  p {
+    width: 75%;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
