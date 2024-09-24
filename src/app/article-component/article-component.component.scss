@@ -19,8 +19,21 @@
     margin: 10px;
   }
   p {
-    width: 75%;
     font-weight: 300;
     font-size: 16px;
+  }
+  .article-com {
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 10px 30px;
+    box-shadow: lightgray 4px 4px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    label, p {
+      margin: 10px;
+    }
   }
 }
