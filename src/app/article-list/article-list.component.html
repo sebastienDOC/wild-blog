@@ -1,7 +1,10 @@
 <section class="container">
+  <button (click)="toggleAllArticles()" class="big-button">
+    Toggle All Articles
+  </button>
   @if(!hasPublishedArticles()) {
-    <div>
-      <p>Aucun article publié</p>
+    <div class="center">
+      <h2>Aucun article publié</h2>
     </div>
   } @else {
     <ul class="list-container">

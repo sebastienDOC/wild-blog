@@ -75,5 +75,10 @@ export class ArticleListComponent {
   hasPublishedArticles(): boolean {
     return this.articles.some(article => article.isPublished);
   }
+  toggleAllArticles(): void {
+    this.articles.forEach(article => {
+      article.isPublished = !article.isPublished;
+    });
+  }
 
 }

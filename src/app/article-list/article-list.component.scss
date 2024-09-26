@@ -1,6 +1,32 @@
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+}
+.big-button {
+  height: 50px;
+  width: 150px;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: scale 0.3s;
+  &:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: scale 0.3s;
+  }
+}
+.center {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .list-container {
   width: 100%;
