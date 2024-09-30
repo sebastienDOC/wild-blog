@@ -1,0 +1,26 @@
+.landing-ctn {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  a {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+  }
+  .bg {
+  height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    position: absolute;
+    left: 5%;
+    width: 10%;
+  }
+}
+

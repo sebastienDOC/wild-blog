@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 50vh;
 }
 .big-button {
   height: 50px;
@@ -52,7 +53,7 @@
     transform: rotate(315deg);
     cursor: pointer;
   }
-  button {
+  .button {
     background-color: darkgreen;
     color: white;
     border: none;
@@ -66,7 +67,7 @@
     }
   }
   h2 {
-    margin-bottom: 0;
+    margin: 10px 0;
     text-align: center;
   }
   img {
@@ -109,10 +110,9 @@
       right: 0;
       top: -10px;
       border-radius: 100%;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       display: flex;
-      padding: 10px;
       align-items: center;
       justify-content: center;
       border: 1px solid green;
@@ -146,4 +146,7 @@
 }
 .invisible {
   display: none;
+}
+.more {
+  margin-left: auto;
 }

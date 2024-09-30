@@ -6,6 +6,7 @@ export class Article {
     public image: string,
     public isPublished: boolean,
     public comment: string,
-    public likes: number
+    public likes: number,
+    public id: string
   ) {}
 }

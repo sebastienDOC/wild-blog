@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <section class="container">
   <button (click)="toggleAllArticles()" class="big-button">
     Toggle All Articles
@@ -11,7 +13,7 @@
       @for (article of articles; track $index) {
         @if (article.isPublished) {
           <li class="article-card" [ngClass]="{'popular-article' : article.likes > 100}">
-            <button (click)="togglePublication(article)">
+            <button (click)="togglePublication(article)" class="button">
               {{ article.isPublished ? 'Retirer l\'article' : 'Afficher l\'article' }}
             </button>
             @if (article.likes > 100) {
@@ -39,6 +41,7 @@
                 <p><strong>Commentaire : </strong>{{ article.comment }}</p>
               </div>
             </div>
+            <a [routerLink]="['/article', article.id]" class="button">Voir l'article</a>
           </li>
         }
       }
@@ -46,3 +49,4 @@
   }
 </section>
 
+<app-footer></app-footer>

@@ -1,0 +1,30 @@
+.header-ctn {
+  position: relative;
+  margin: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 10px;
+  }
+  p {
+    width: 50%;
+  }
+  nav {
+    a {
+      color: black;
+      text-decoration: none;
+      margin-top: 25px;
+      font-size: 32px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+      }
+    }
+  }
+}
+

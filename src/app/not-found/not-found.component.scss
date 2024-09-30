@@ -1,0 +1,48 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.content {
+  text-align: center;
+  background-color: white;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 10rem;
+  color: #ff6b6b;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ff3b3b;
+}

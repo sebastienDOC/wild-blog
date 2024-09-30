@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="ctn">
+  <div class="article-cards">
+    <div [ngStyle]="{ display: article.isPublished ? 'block' : 'none' }">
+      <h2>{{ article.title }}</h2>
+      <img [src]="article.image" [alt]="article.title"/>
+      <p>{{ article.content }}</p>
+      <p><strong>Auteur:</strong> {{ article.author }}</p>
+      <div class="article-com">
+        <label for="comment">Ajouter un commentaire : </label>
+        <input id="comment" type="text" [(ngModel)]="article.comment">
+        <p><strong>Commentaire : </strong>{{ article.comment }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
