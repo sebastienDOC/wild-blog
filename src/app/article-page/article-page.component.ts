@@ -1,11 +1,11 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from '../../models/article.model';
-import { NgStyle } from '@angular/common';
-import { HeaderComponent } from "../header/header.component";
+import { articlesList } from '../data/articles-data';
 import { FooterComponent } from "../footer/footer.component";
-import { FormsModule } from '@angular/forms';
-import { articlesList } from '../data/articles-data'
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-article-page',

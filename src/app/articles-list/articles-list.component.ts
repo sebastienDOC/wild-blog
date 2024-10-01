@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Article } from '../../models/article.model';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { articlesList } from '../data/articles-data';
 
 @Component({
@@ -17,7 +17,6 @@ import { articlesList } from '../data/articles-data';
 
 export class ArticlesListComponent {
   articles = articlesList
-  router: Router = inject(Router);
 
   togglePublication(article: Article): void {
     article.isPublished = !article.isPublished
