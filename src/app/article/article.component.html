@@ -36,7 +36,10 @@
 
     </div>
 
-    <a [routerLink]="['/article', article.id]" class="button">Voir l'article</a>
+    <div class="article-btn">
+      <a [routerLink]="['/article', article.id]" class="button">Voir l'article</a>
+      <button class="button" (click)="sendNotification()">J'aime</button>
+    </div>
 
   </li>
 }

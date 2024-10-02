@@ -3,6 +3,12 @@
     Toggle All Articles
   </button>
 
+  @if (likeFromChild) {
+    <div class="pop-up">
+      <p>{{likeFromChild}}</p>
+    </div>
+  }
+
   @if(!hasPublishedArticles()) {
     <div class="center">
       <h2>Aucun article publié</h2>
@@ -11,7 +17,7 @@
   } @else {
     <ul class="list-container">
       @for (article of articles; track $index) {
-        <app-article [article]="article"></app-article>
+        <app-article [article]="article" (notifyParent)="handleNotification($event)"></app-article>
       }
     </ul>
   }

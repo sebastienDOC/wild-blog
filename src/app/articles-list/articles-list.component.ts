@@ -18,6 +18,15 @@ import { HeaderComponent } from "../header/header.component";
 
 export class ArticlesListComponent {
   articles: Article[] = articlesList
+  likeFromChild: string = '';
+
+  handleNotification(articleTitle: string) {
+    this.likeFromChild = `L'article "${articleTitle}" vient d'être liké !`;
+
+    setTimeout(() => {
+      this.likeFromChild = '';
+    }, 2000);
+  }
 
   toggleAllArticles(): void {
     this.articles.forEach(article => {

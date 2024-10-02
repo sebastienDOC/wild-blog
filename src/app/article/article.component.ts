@@ -1,5 +1,5 @@
 import { CommonModule, NgStyle } from '@angular/common';
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { Article } from '../../models/article.model';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -16,6 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class ArticleComponent implements OnInit{
   @Input() article!: Article;
+  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
   router: Router = inject(Router);
 
   constructor(private route: ActivatedRoute) {}
@@ -33,5 +34,9 @@ export class ArticleComponent implements OnInit{
 
   togglePublication(article: Article): void {
     article.isPublished = !article.isPublished
+  }
+
+  sendNotification() {
+    this.notifyParent.emit(this.article.title);
   }
 }
