@@ -18,7 +18,7 @@ export class UserComponent {
   zipCode = new FormControl('');
   city = new FormControl('');
 
-  submittedUser!: User
+  submittedUser!: User;
 
   onSubmit() {
     const address: Address = {
