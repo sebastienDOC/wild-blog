@@ -1,0 +1,47 @@
+<div class="form">
+  <h2>Inscription</h2>
+  <label>
+    Nom d'utilisateur:
+  </label>
+  <input type="text" [formControl]="username">
+
+  <label>
+    Email:
+  </label>
+  <input type="email" [formControl]="email">
+
+  <label>
+    Password:
+  </label>
+  <input type="password" [formControl]="password">
+
+  <label>
+    Rue:
+  </label>
+  <input type="text" [formControl]="street">
+
+  <label>
+    Code Postal:
+  </label>
+  <input type="text" [formControl]="zipCode">
+
+  <label>
+    Ville:
+  </label>
+  <input type="text" [formControl]="city">
+
+  <button type="submit" (click)="onSubmit()">S'inscrire</button>
+</div>
+
+@if (submittedUser) {
+  <div class="new-user">
+    <h2>Utilisateur créé:</h2>
+    <p><strong>Nom d'utilisateur:</strong> {{ submittedUser.username }}</p>
+    <p><strong>Email:</strong> {{ submittedUser.email }}</p>
+    <p><strong>Mot de passe:</strong> {{ submittedUser.password }}</p>
+    <h3>Adresse:</h3>
+    <p><strong>Rue:</strong> {{ submittedUser.address.street }}</p>
+    <p><strong>Code postal:</strong> {{ submittedUser.address.zipCode }}</p>
+    <p><strong>Ville:</strong> {{ submittedUser.address.city }}</p>
+  </div>
+}
