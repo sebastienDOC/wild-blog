@@ -3,18 +3,24 @@
   <label>
     Nom d'utilisateur:
   </label>
-  <input type="text" formControlName="username" required minlength="3" maxlength="12">
+  <input type="text" formControlName="username">
 
   <div formGroupName="credentials" class="credentials">
     <label>
       Email:
     </label>
-    <input type="email" required email formControlName="email">
+    <input type="email" formControlName="email">
+
+    @if (userForm.get('credentials.email')?.errors) {
+      <div [hidden]="!userForm.get('credentials.email')?.invalid">
+        Email is invalid: {{ userForm.get("credentials.email")?.errors?.['email'].rules }}
+      </div>
+    }
 
     <label>
       Mot de passe:
     </label>
-    <input type="password" required minlength="8" formControlName="password">
+    <input type="password" formControlName="password">
   </div>
 
   <button type="submit" [disabled]="!userForm.valid">S'inscrire</button>

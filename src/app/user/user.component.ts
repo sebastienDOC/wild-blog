@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { User } from '../../models/user.model';
-import { Address } from '../../models/address.model';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { emailValidator } from '../validators/email.validator';
 
 @Component({
   selector: 'app-user',
@@ -11,15 +10,17 @@ import { Address } from '../../models/address.model';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-  userForm = new FormGroup({
-    username: new FormControl(''),
-    credentials: new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl('')
-    })
-  })
+  userForm: FormGroup
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {
+    this.userForm = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12)]],
+      credentials: this.fb.group({
+        email: ['', [Validators.required, emailValidator]],
+        password: ['', [Validators.required, Validators.minLength(8)]]
+      })
+    })
+  }
 
   onSubmit() {
     console.log(this.userForm.value)
