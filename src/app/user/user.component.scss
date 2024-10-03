@@ -1,10 +1,14 @@
-.form {
+form {
   display: flex;
   flex-direction: column;
   width: 30%;
   margin: auto;
   h2 {
     text-align: center;
+  }
+  .credentials {
+    display: flex;
+    flex-direction: column;
   }
 }
 .new-user {
