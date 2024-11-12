@@ -41,19 +41,3 @@
   gap: 50px;
   margin-bottom: 50px;
 }
-.pop-up {
-  position: fixed;
-  top: 5%;
-  right: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid lightgreen;
-  padding: 25px;
-  z-index: 1000;
-  background-color: lightgreen;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: bold;
-}

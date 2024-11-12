@@ -3,12 +3,6 @@
     Toggle All Articles
   </button>
 
-  @if (likeFromChild) {
-    <div class="pop-up">
-      <p>{{likeFromChild}}</p>
-    </div>
-  }
-
   @if(!hasPublishedArticles()) {
     <div class="center">
       <h2>Aucun article publié</h2>

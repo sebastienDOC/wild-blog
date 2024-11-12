@@ -15,6 +15,7 @@ import { articlesList } from '../../data/articles-data';
 export class ArticleComponent implements OnInit{
   @Input() article!: Article;
   @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
+  likeNotification: string = '';
   router: Router = inject(Router);
 
   constructor(private route: ActivatedRoute) {}
@@ -36,5 +37,10 @@ export class ArticleComponent implements OnInit{
 
   sendNotification() {
     this.notifyParent.emit(this.article.title);
+    this.likeNotification = `L'article "${this.article.title}" vient d'être liké !`;
+
+    setTimeout(() => {
+      this.likeNotification = '';
+    }, 2000);
   }
 }

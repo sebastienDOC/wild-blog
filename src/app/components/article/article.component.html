@@ -1,4 +1,7 @@
 @if (article.isPublished) {
+  <div *ngIf="likeNotification" class="pop-up">
+    <p>{{ likeNotification }}</p>
+  </div>
   <li class="article-card" [ngClass]="{'popular-article' : article.likes > 100}">
 
     <button (click)="togglePublication(article)" class="button">
