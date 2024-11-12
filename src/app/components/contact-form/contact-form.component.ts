@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Message } from '../../../models/message.model';
+import { Message } from '../../models/message.model';
 import { SignupFormComponent } from "../signup-form/signup-form.component";
 
 @Component({

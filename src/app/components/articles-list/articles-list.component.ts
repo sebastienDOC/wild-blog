@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Article } from '../../../models/article.model';
+import { Article } from '../../models/article.model';
 import { articlesList } from '../../data/articles-data';
 import { ArticleComponent } from '../article/article.component';
 

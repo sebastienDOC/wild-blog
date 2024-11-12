@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { Article } from '../../../models/article.model';
+import { Article } from '../../models/article.model';
 import { articlesList } from '../../data/articles-data';
 
 @Component({
