@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Message } from '../../models/message.model';
-import { FooterComponent } from "../footer/footer.component";
-import { HeaderComponent } from "../header/header.component";
+import { Message } from '../../../models/message.model';
 import { SignupFormComponent } from "../signup-form/signup-form.component";
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, FooterComponent, HeaderComponent, SignupFormComponent],
+  imports: [FormsModule, SignupFormComponent],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })

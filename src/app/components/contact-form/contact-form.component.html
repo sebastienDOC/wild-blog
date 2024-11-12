@@ -2,7 +2,7 @@
   <h2>Template Driven Forms</h2>
   <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div class="field-ctn">
-      <!-- Champ Nom -->
+
       <fieldset>
         <label for="lastname">Nom</label>
         <input id="lastname" name="lastname" type="text" [(ngModel)]="newMessage.lastname" #lastname="ngModel" required minlength="2" required maxlength="15">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="field-ctn">
-      <!-- Champ Prénom -->
+
       <fieldset>
         <label for="firstname">Prénom</label>
         <input id="firstname" name="firstname" type="text" [(ngModel)]="newMessage.firstname" #firstname="ngModel" required minlength="2" required maxlength="15">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="field-ctn">
-      <!-- Champ Email -->
+
       <fieldset>
         <label for="email">Contact</label>
         <input id="email" name="email" type="email" [(ngModel)]="newMessage.email" #email="ngModel" required email>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="field-ctn">
-      <!-- Champ Contenu du message -->
+
       <fieldset>
         <label for="content">Contenu du message</label>
         <textarea id="content" name="content" [(ngModel)]="newMessage.content" #content="ngModel" required minlength="20" rows="4" cols="50"></textarea>

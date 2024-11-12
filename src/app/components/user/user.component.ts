@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { emailValidator } from '../validators/email.validator';
+import { emailValidator } from '../../validators/email.validator';
 
 @Component({
   selector: 'app-user',

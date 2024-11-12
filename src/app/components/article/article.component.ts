@@ -1,18 +1,16 @@
-import { CommonModule, NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
-import { Article } from '../../models/article.model';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { articlesList } from '../data/articles-data';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { Article } from '../../../models/article.model';
+import { articlesList } from '../../data/articles-data';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
   standalone: true,
-  imports: [FormsModule, CommonModule, HeaderComponent, FooterComponent, RouterLink]
+  imports: [FormsModule, CommonModule, RouterLink]
 })
 export class ArticleComponent implements OnInit{
   @Input() article!: Article;
